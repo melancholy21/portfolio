@@ -3,44 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Angelo Dela Torre - Aspiring Frontend Developer and IT student from Pateros Technological College. View projects, tech stack, and portfolio.">
+
+    <meta name="keywords" content="Angelo Dela Torre, Frontend Developer, Web Developer Portfolio, IT Student Philippines, React Developer">
+
+    <meta name="author" content="Angelo Dela Torre">
+
+    <meta property="og:title" content="Angelo Dela Torre | Frontend Developer Portfolio">
+    <meta property="og:description" content="Portfolio of Angelo Dela Torre - IT student specializing in frontend development, web applications, and modern technologies.">
+    <meta property="og:image" content="images/angelo dela torre.jpeg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://angelo-delatorre.vercel.app/">
+
     <script src="https://kit.fontawesome.com/8c14e3130c.js" crossorigin="anonymous"></script>
+
     <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon-32x32.png">
     <link rel="stylesheet" href="style.css">
+
     <title>Angelo Dela Torre</title>
 </head>
+
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Angelo Dela Torre",
+    "url": "https://angelo-delatorre.vercel.app/",
+    "sameAs": [
+    "https://github.com/melancholy21",
+    "https://www.linkedin.com/in/dela-torre-angelo-2103z/"
+    ],
+    "jobTitle": "Frontend Developer",
+    "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Pateros Technological College"
+    }
+    }
+</script>
+
 <body>
     <main>
-        <div class="main_page">
-            <section class="mb">
-                <div class="info">
+        <div class="page">
+            <header class="u-margin-bottom">
+                <div class="profile__info fade-in">
 
-                    <img class="profile_picture" src="images/angelo dela torre.jpeg" alt="profile_picture">
+                    <img 
+                    class="profile__image" 
+                    src="images/angelo dela torre.webp" 
+                    alt="Portrait of Angelo Dela Torre, aspiring frontend developer"
+                    loading="eager">
 
-                    <div class="personal_info_container">
+                    <div class="profile__details">
 
-                        <div class="name_and_dm">
+                        <div class="profile__header">
                             <h1 class="name truncate">Angelo Dela Torre</h1>
-                            <button class="toggle-btn" id="themeToggle"><i class="fa-regular fa-moon"></i></button>
+                            <button class="toggle-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode"><i class="fa-regular fa-moon"></i></button>
                         </div>
 
-                        <div class="address">
+                        <div class="profile__location" aria-label="Location">
                             <i class="fa-solid fa-location-dot"></i>
                             <p class="truncate">Pasig City, Metro Manila, Philippines</p>
                         </div>
 
-                        <p class="job">Aspiring Frontend Developer</p>
+                        <p class="job">Frontend Developer | IT Student | Open to Internship</p>
                         
-                        <div class="resume_email">
-                            <div class="resume">
-                                <a href="resume/Angelo Dela Torre - Resume.pdf" download="Resume - Dela Torre, Angelo D.">
-                                <i class="fa-regular fa-file"></i>   
-                                Resume
+                        <div class="profile__actions">
+                            <div class="profile__button profile__button--primary ">
+                                <a href="resume/Angelo Dela Torre - Resume.pdf" download="Resume - Dela Torre, Angelo D." aria-label="Download Angelo Dela Torre resume"> 
+                                <i class="fa-regular fa-file"></i> 
+                                    Resume 
                                 </a>
                             </div>
-                            <div class="email">
-                                <a href="mailto:angelodn1234@gmail.com">
+                            <div class="profile__button profile__button--secondary">
+                                <a href="mailto:angelodn1234@gmail.com" aria-label="Send email to Angelo Dela Torre">
                                 <i class="fa-regular fa-envelope"></i>
-                                Send Email
+                                    Send Email
                                 </a>
                             </div>
                         </div>
@@ -48,10 +85,10 @@
                     </div>
 
                 </div>
-            </section>
+            </header>
 
-            <section class="grid_layout">
-                <div class="about my-card">
+            <section class="page__grid">
+                <div class="about card fade-in">
                     <h2>About</h2>
                     <p>My name is Angelo Dela Torre, a 4th-year Bachelor of Science in Information Technology student at Pateros Technological College, currently seeking a 600-hour internship as part of our academic curriculum.
                         I have hands-on experience in web development using HTML, CSS, JavaScript, and modern frameworks and tools through academic and personal projects. <br>  <br> I am familiar with building responsive user interfaces, working with APIs, and applying basic backend concepts. I also have experience using tools such as Git, Postman, and Firebase, and I am continuously improving my skills in frontend development and system integration.
@@ -59,25 +96,25 @@
                     </p>
                 </div>
 
-                <div class="experience my-card">
+                <div class="experience card fade-in">
                     <h2>Experience</h2>
                     <div class="timeline">
-                        <div class="line"></div>
+                        <div class="timeline__line"></div>
 
-                        <div class="experience-1">
-                            <div class="box-1"></div>
+                        <div class="timeline__item">
+                            <div class="timeline__marker--primary"></div>
                             <div class="education">
                                 <h3>BS Information Technology</h3>
-                                <div class="school_year">
+                                <div class="timeline__meta">
                                     <span>Pateros Technological College</span>
                                     <span>2026</span>
                                 </div>
                             </div>
 
-                            <div class="box-2"></div>
-                            <div class="first_code">
+                            <div class="timeline__marker--secondary"></div>
+                            <div class="first__code">
                                 <h3>Hello World! 👋</h3>
-                                <div class="first_code_year">
+                                <div class="timeline__meta">
                                     <span>Wrote my first line of code</span>
                                     <span>2021</span>
                                 </div>
@@ -86,8 +123,8 @@
                     </div>
                 </div>
 
-                <div class="techstack my-card">
-                    <div class="stack_title_view">
+                <div class="tech card fade-in">
+                    <div class="tech__header">
                         <h2>Tech Stack</h2>
                         <a href="#">
                             View All
@@ -95,9 +132,9 @@
                         </a>
                     </div>
                     <div class="stacks">
-                        <div class="frontend_stack">
+                        <div class="frontend__stack">
                             <h3>Frontend</h3>
-                            <div class="frontend_tech">
+                            <div class="frontend__tech">
                                 <span>HTML</span>
                                 <span>CSS</span>
                                 <span>JavaScript</span>
@@ -105,18 +142,18 @@
                                 <span>Tailwind CSS</span>
                             </div>
                         </div>
-                        <div class="backend_stack">
+                        <div class="backend__stack">
                             <h3>Backend</h3>
-                            <div class="backend_tech">
+                            <div class="backend__tech">
                                 <span class="center">Node.js</span>
                                 <span class="center">Express.js</span>
                                 <span class="center">MongoDB</span>
                             </div>
                         </div>
 
-                        <div class="dev_tools">
+                        <div class="dev__tools">
                             <h3>Developer Tools</h3>
-                            <div class="dev_tech">
+                            <div class="dev__tech">
                                 <span class="center">Git</span>
                                 <span class="center">Github</span>
                                 <span class="center">VS Code</span>
@@ -128,104 +165,106 @@
                     </div>
                 </div>
 
-                <div class="recent_projects my-card">
-                    <div class="projects">
+                <div class="projects card fade-in">
+                    <div class="projects__header">
                         <h2>Recent Projects</h2>
                         <a href="#">
                             View All
                             <i class="fa-solid fa-angle-right"></i>
                         </a>
                     </div>
-                    <div class="projects_list">
-                            <div class="my-card p-3">
-                                <a href="https://ad-kpop-merch.vercel.app/">
+                    <div class="projects__grid">
+                            <div class="card p-3">
+                                <a href="https://ad-kpop-merch.vercel.app/" target="_blank" rel="noopener noreferrer">
                                     <h3>AD-KPOP MERCH</h3>
                                     <p>E-commerce website for TECHNOPRENEURSHIP Subject</p>
-                                    <p class="project_link">ad-kpop-merch.vercel.app</p>
+                                    <p class="project__link">ad-kpop-merch.vercel.app</p>
                                 </a>
                             </div>
-                            <div class="my-card p-3">
-                                <a href="https://dearnote.onrender.com">
+                            <div class="card p-3">
+                                <a href="https://dearnote.onrender.com" target="_blank" rel="noopener noreferrer">
                                     <h3>DearNote</h3>
                                     <p>Full-Stack Note-Taking Web Application </p>
-                                    <p class="project_link">dearnote.onrender.com</p>
+                                    <p class="project__link">dearnote.onrender.com</p>
                                 </a>
                             </div>
-                            <div class="my-card p-3">
-                                <a href="https://infiltr8-website.vercel.app/">
+                            <div class="card p-3">
+                                <a href="https://infiltr8-website.vercel.app/" target="_blank" rel="noopener noreferrer">
                                     <h3>INFILTR8:Trust No One Website</h3>
                                     <p>Website for our Capstone Project called INFILTR8</p>
-                                    <p class="project_link">infiltr8-website.vercel.app</p>
+                                    <p class="project__link">infiltr8-website.vercel.app</p>
                                 </a>
                             </div>
-                            <div class="my-card p-3">
-                                <a href="https://drive.google.com/drive/u/1/folders/1oxJpq1xpVhXyGsgY8yit-eQS6Pr82tAL">
+                            <div class="card p-3">
+                                <a href="https://drive.google.com/drive/u/1/folders/1oxJpq1xpVhXyGsgY8yit-eQS6Pr82tAL" target="_blank" rel="noopener noreferrer">
                                     <h3>INFILTR8:Trust No One | <i>Capstone Project</i></h3>
                                     <p>Online Multiplayer Game inspired by Among Us</p>
-                                    <p class="project_link">drive.google.com/INFILTR8:Trust No One </p>
+                                    <p class="project__link">drive.google.com/INFILTR8:Trust No One </p>
                                 </a>
                             </div>
                     </div>
                 </div>
 
-                <div class="social_links my-card">
+                <div class="social card fade-in">
                     <h2>Socials</h2>
 
-                    <div class="socmed">
-                        <a class="social_card my-card p-3" href="https://www.linkedin.com/in/dela-torre-angelo-2103z/">
+                    <div class="social__grid">
+                        <a class="social__card card p-3" aria-label="Social media links" href="https://www.linkedin.com/in/dela-torre-angelo-2103z/">
                             <i class="fa-brands fa-linkedin"></i>
                             <p>LinkedIn</p>
                         </a>
 
-                        <a class="social_card my-card p-3" href="https://github.com/melancholy21">
+                        <a class="social__card card p-3" aria-label="Social media links" href="https://github.com/melancholy21">
                             <i class="fa-brands fa-github"></i>
                             <p>GitHub</p>
                         </a>
 
-                        <a class="social_card my-card p-3" href="https://www.instagram.com/melancholy21u/">
+                        <a class="social__card card p-3" aria-label="Social media links" href="https://www.instagram.com/melancholy21u/">
                             <i class="fa-brands fa-instagram"></i>
                             <p>Instagram</p>
                         </a>
 
-                        <a class="social_card my-card p-3" href="mailto:angelodn1234@gmail.com">
+                        <a class="social__card card p-3" aria-label="Social media links" href="mailto:angelodn1234@gmail.com">
                             <i class="fa-regular fa-envelope"></i>
                             <p>Email</p>
                         </a>
                     </div>
                 </div>
 
-                <section class="gallery my-card">
-                    <div class="gallery-header">
+                <section class="gallery card fade-in">
+                    <div class="gallery__header">
                         <h2>Gallery</h2>
                     </div>
 
-                    <div class="gallery-wrapper">
-                        <button class="gallery-btn left">&#10094;</button>
+                    <div class="gallery__wrapper fade-in">
+                        <button class="gallery__btn left" aria-label="Previous gallery image">&#10094;</button>
 
-                        <div class="gallery-track">
-                            <img src="images/angelo dela torre.jpeg" alt="1">
-                            <img src="images/angelo.jpg" alt="2">
-                            <img src="images/angeloangelo.jpg" alt="3">
-                            <img src="images/angeloangeloangelo.jpg" alt="4">
-                            <img src="images/angeloangeloangeloangelo.jpg" alt="5">
+                        <div class="gallery__track">
+                            <img src="images/angelo dela torre.webp" alt="Angelo Dela Torre portrait photo">
+                            <img src="images/1.webp" alt="Angelo Dela Torre portrait photo">
+                            <img src="images/2.webp" alt="Angelo Dela Torre portrait photo" loading="lazy">
+                            <img src="images/3.webp" alt="Angelo Dela Torre portrait photo" loading="lazy">
+                            <img src="images/4.webp" alt="Angelo Dela Torre portrait photo" loading="lazy">
                         </div>
 
-                        <button class="gallery-btn right">&#10095;</button>
+                        <button class="gallery__btn right" aria-label="Next gallery image">&#10095;</button>
                     </div>
                 </section>
 
-                <div class="img-modal">
-                    <span class="close-modal">&times;</span>
-                    <img class="modal-content">
+                <div class="img__modal" role="dialog" aria-modal="true" aria-label="Image preview modal">
+                    <span class="close__modal">&times;</span>
+                    <img class="modal__content">
                 </div>
             </section>
 
-            <footer>
-                <h3>&copy 2026 Angelo Dela Torre. All rights reserved.</h3>
+            <footer class="fade-in">
+                <p>&copy; 2026 Angelo Dela Torre. All rights reserved.</p>
             </footer>
+
         </div>
     </main>
 
-    <script src="index.js"></script>
+    <script src="index.js">
+    </script>
 </body>
 </html>

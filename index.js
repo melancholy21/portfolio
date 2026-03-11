@@ -10,9 +10,9 @@ toggleBtn.addEventListener("click", () => {
     }
 });
 
-const track = document.querySelector('.gallery-track');
-const leftBtn = document.querySelector('.gallery-btn.left');
-const rightBtn = document.querySelector('.gallery-btn.right');
+const track = document.querySelector('.gallery__track');
+const leftBtn = document.querySelector('.gallery__btn.left');
+const rightBtn = document.querySelector('.gallery__btn.right');
 
 leftBtn.addEventListener('click', () => {
     track.scrollBy({ left: -300, behavior: 'smooth' });
@@ -22,10 +22,10 @@ rightBtn.addEventListener('click', () => {
     track.scrollBy({ left: 300, behavior: 'smooth' });
 });
 
-const modal = document.querySelector('.img-modal');
-const modalImg = document.querySelector('.modal-content');
-const closeModal = document.querySelector('.close-modal');
-const images = document.querySelectorAll('.gallery-track img');
+const modal = document.querySelector('.img__modal');
+const modalImg = document.querySelector('.modal__content');
+const closeModal = document.querySelector('.close__modal');
+const images = document.querySelectorAll('.gallery__track img');
 
 images.forEach(img => {
     img.addEventListener('click', () => {
@@ -43,3 +43,19 @@ modal.addEventListener('click', (e) => {
         modal.style.display = "none";
     }
 });
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+
+    });
+}, {
+    threshold: 0.2
+});
+
+const hiddenElements = document.querySelectorAll(".fade-in");
+
+hiddenElements.forEach((el) => observer.observe(el));

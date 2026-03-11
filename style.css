@@ -36,14 +36,14 @@ body {
     transition: background 0.4s ease, color 0.4s ease;
 }
 
-.main_page {
+.page {
     max-width: 56rem;
     margin: auto;
     padding: 48px 20px;
 }
 
-.mb {
-    margin-bottom: 36px;
+.u-margin-bottom {
+    margin-bottom: 24px;
 }
 
 button#themeToggle {
@@ -74,30 +74,30 @@ button#themeToggle:hover {
     transition: all 0.3s ease;
 }
 
-.info {
+.profile__info {
     display: flex;
     align-items: center;
     gap: 24px;
 }
 
-.profile_picture {
+.profile__image {
     width: 100%;
     max-width: 170px;
     height: auto;
     aspect-ratio: 1 / 1;
 }
 
-.profile_picture:hover {
+.profile__image:hover {
     transform: scale(1.05) rotate(-2deg);
     box-shadow: var(--shadow-hover);
 }
 
-.personal_info_container {
+.profile__details {
     flex: 1 1 0%;
     min-width: 0;
 }
 
-.name_and_dm {
+.profile__header{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -116,11 +116,11 @@ button#themeToggle:hover {
     text-overflow: ellipsis;
 }
 
-.address {
+.profile__location {
     display: flex;
     align-items: center;
     align-content: center;
-    gap: 5.5px;
+    gap: 6px;
     margin-bottom: 17px;
     opacity: 0.75;
 }
@@ -136,27 +136,26 @@ button#themeToggle:hover {
     color: var(--accent);
 }
 
-.resume_email {
+.profile__actions {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
     margin-top: 16px;
 }
 
-.resume,
-.email {
+.profile__button {
     padding: 12px 18px;
     border-radius: 2.5px;
     box-shadow: var(--shadow-soft);
     transition: all 0.35s cubic-bezier(.4,0,.2,1);
 }
 
-.resume {
+.profile__button--primary  {
     background: var(--text-color);
     border: 2px solid var(--text-color);
 }
 
-.resume a {
+.profile__button--primary a {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -165,17 +164,17 @@ button#themeToggle:hover {
     font-weight: 500;
 }
 
-.resume:hover {
+.profile__button--primary:hover {
     transform: translateY(-6px) scale(1.03);
     box-shadow: var(--shadow-hover);
 }
 
-.email {
+.profile__button--secondary {
     background: var(--card-bg);
     border: 2px solid var(--text-color);
 }
 
-.email a {
+.profile__button--secondary a {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -184,30 +183,29 @@ button#themeToggle:hover {
     font-weight: 500;
 }
 
-.email:hover {
+.profile__button--secondary:hover {
     background: var(--text-color);
     transform: translateY(-6px) scale(1.03);
     box-shadow: var(--shadow-hover);
 }
 
-.email:hover a {
+.profile__button--secondary:hover a {
     color: var(--bg-color);
 }
 
-.grid_layout {
+.page__grid {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.my-card {
+.card {
     background-color: var(--card-bg);
     border-radius: 3px;
     box-shadow: var(--shadow-soft);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.my-card:hover {
-    transform: translateY(-6px);
+.card:hover {
     box-shadow: var(--shadow-hover);
 }
 
@@ -257,7 +255,7 @@ button#themeToggle:hover {
     margin-top: 16px;
 }
 
-.line {
+.timeline__line {
     position: absolute;
     left: 0.350rem;
     bottom: -1px;
@@ -266,12 +264,12 @@ button#themeToggle:hover {
     background-color: var(--text-color);
 }
 
-.experience-1 {
+.timeline__item {
     position: relative;
     padding-left: 24px;
 }
 
-.box-1 {
+.timeline__marker--primary {
     position: absolute;
     left: 0;
     top: 5px;
@@ -282,13 +280,13 @@ button#themeToggle:hover {
     background-color: var(--text-color);
 }
 
-.box-1,
-.box-2 {
+.timeline__marker--primary,
+.timeline__marker--secondary {
     transition: all 0.3s ease;
 }
 
-.box-1:hover,
-.box-2:hover {
+.timeline__marker--primary:hover,
+.timeline__marker--secondary:hover {
     transform: scale(1.2);
     background-color: var(--text-color);
 }
@@ -301,12 +299,12 @@ button#themeToggle:hover {
     opacity: 0.75;
 }
 
-.school_year {
+.timeline__meta {
     display: flex;
     justify-content: space-between;
 }
 
-.box-2 {
+.timeline__marker--secondary {
     position: absolute;
     left: 0;
     top: 56.5px;
@@ -317,78 +315,70 @@ button#themeToggle:hover {
     background-color: #fff;
 }
 
-.box-2:hover {
+.timeline__marker--secondary:hover {
     background-color: var(--text-color);
 }
 
-.first_code {
+.first__code {
     margin-top: 8px;
 }
 
-.first_code h3 {
+.first__code h3 {
     opacity: 0.90;
 }
 
-.first_code p {
+.first__code p {
     opacity: 0.75;
 }
 
-.first_code_year {
-    display: flex;
-    justify-content: space-between;
-}
-
-.techstack {
+.tech {
     padding: 1rem;
     margin-bottom: 8px;
 }
 
-.stack_title_view {
+.tech__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 8px;
 }
 
-.stack_title_view a {
+.tech__header a {
     text-decoration: none;
     color: var(--text-color);
     font-size: 14px;
-}
-
-.techstack > * + * {
-    margin-top: 8px;
 }
 
 .stack > * + * {
     margin-top: 8px;
 }
 
-.frontend_stack {
+.frontend__stack {
     margin-bottom: 8px;
 }
 
-.frontend_stack h3 {
+.frontend__stack h3 {
     font-weight: 500;
 }
 
-.backend_stack h3 {
+.backend__stack h3 {
     font-weight: 500;
 }
 
-.dev_tools h3 {
+.developer__tools h3 {
     font-weight: 500;
 }
 
-.frontend_tech, .backend_tech, .dev_tech {
+.frontend__tech, .backend__tech, .dev__tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 12px;
     margin-top: 8px;
 }
 
-.frontend_tech span,
-.backend_tech span,
-.dev_tech span {
+.frontend__tech span,
+.backend__tech span,
+.dev__tech span {
     border: 1px solid var(--text-color);
     padding: 9px 10px;
     border-radius: 3px;
@@ -396,15 +386,15 @@ button#themeToggle:hover {
     cursor: default;
 }
 
-.frontend_tech span:hover,
-.backend_tech span:hover,
-.dev_tech span:hover {
+.frontend__tech span:hover,
+.backend__tech span:hover,
+.dev__tech span:hover {
     background-color: var(--text-color);
     color: var(--bg-color);
     transform: translateY(-3px);
 }
 
-.backend_stack {
+.backend__stack {
     margin-bottom: 8px;
 }
 
@@ -412,19 +402,19 @@ button#themeToggle:hover {
     justify-content: center;
 }
 
-.recent_projects {
+.projects {
     padding: 20px;
     margin-bottom: 8px;
 }
 
-.projects {
+.projects__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8px;
 }
 
-.projects a {
+.projects__header a {
     text-decoration: none;
     color: var(--text-color);
     font-size: 14px;
@@ -434,18 +424,18 @@ button#themeToggle:hover {
     padding: 12px;
 }
 
-.projects_list {
+.projects__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px; 
 }
 
-.projects_list div {
+.projects__grid div {
     margin-bottom: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.projects_list div:hover {
+.projects__grid div:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: var(--shadow-hover);
 }
@@ -459,7 +449,7 @@ button#themeToggle:hover {
     margin-top: 8px;
 }
 
-.project_link {
+.project__link {
     display: inline-block;
     justify-content: center;
     padding: 4px 6px;
@@ -467,22 +457,22 @@ button#themeToggle:hover {
     background-color: var(--link-bg-color);
 }
 
-.social_links {
+.social {
     padding: 1rem;
     margin-bottom: 8px;
 }
 
-.social_links h2 {
+.social h2 {
     margin-bottom: 12px;
 }
 
-.socmed {
+.social__grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 12px;
 }
 
-.social_card {
+.social__card {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -492,12 +482,12 @@ button#themeToggle:hover {
     border-radius: 6px;
 }
 
-.social_card:hover {
+.social__card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-hover);
 }
 
-.social_card i {
+.social__card i {
     font-size: 1.2rem;
 }
 
@@ -506,15 +496,15 @@ button#themeToggle:hover {
     margin-bottom: 8px;
 }
 
-.gallery-header {
+.gallery__header {
     margin-bottom: 12px;
 }
 
-.gallery-wrapper {
+.gallery__wrapper {
     position: relative;
 }
 
-.gallery-track {
+.gallery__track {
     display: flex;
     gap: 16px;
     overflow-x: auto;
@@ -522,11 +512,11 @@ button#themeToggle:hover {
     scrollbar-width: none;
 }
 
-.gallery-track::-webkit-scrollbar {
+.gallery__track::-webkit-scrollbar {
     display: none;
 }
 
-.gallery-track img {
+.gallery__track img {
     flex: 0 0 auto;
     width: 260px;
     height: 170px;
@@ -537,12 +527,12 @@ button#themeToggle:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery-track img:hover {
+.gallery__track img:hover {
     transform: scale(1.05);
     box-shadow: var(--shadow-hover);
 }
 
-.gallery-btn {
+.gallery__btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -558,21 +548,21 @@ button#themeToggle:hover {
     z-index: 2;
 }
 
-.gallery-btn:hover {
+.gallery__btn:hover {
     background: var(--text-color);
     color: var(--bg-color);
     box-shadow: var(--shadow-hover);
 }
 
-.gallery-btn.left {
+.gallery__btn.left {
     left: -10px;
 }
 
-.gallery-btn.right {
+.gallery__btn.right {
     right: -10px;
 }
 
-.img-modal {
+.img__modal {
     display: none;
     position: fixed;
     inset: 0;
@@ -584,7 +574,7 @@ button#themeToggle:hover {
     padding: 20px;
 }
 
-.img-modal img {
+.img__modal img {
     max-width: 95%;
     max-height: 85%;
     border-radius: 6px;
@@ -592,7 +582,7 @@ button#themeToggle:hover {
     animation: zoomIn 0.3s ease;
 }
 
-.close-modal {
+.close__modal {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -612,9 +602,27 @@ footer {
     gap: 12px;
 }
 
-footer h3 {
+footer p {
     margin-top: 48px;
 }
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in:nth-child(1) { transition-delay: 0.1s; }
+.fade-in:nth-child(2) { transition-delay: 0.2s; }
+.fade-in:nth-child(3) { transition-delay: 0.3s; }
+.fade-in:nth-child(4) { transition-delay: 0.4s; }
+.fade-in:nth-child(5) { transition-delay: 0.5s; }
+.fade-in:nth-child(6) { transition-delay: 0.6s; }
 
 @keyframes zoomIn {
     from {
@@ -632,7 +640,7 @@ footer h3 {
         gap: 24px;
     }
 
-    .profile_picture{
+    .profile__image{
         display: none;
     }
 
@@ -640,15 +648,15 @@ footer h3 {
         font-size: 1.6rem;
     }
 
-    .grid_layout {
+    .grid__layout {
         grid-column: span 4 / span 4;
     }
 
-    .projects_list {
+    .projects__list {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 
-    .gallery-track img {
+    .gallery__track img {
         aspect-ratio: 16 / 9;
         height: auto;
     }
